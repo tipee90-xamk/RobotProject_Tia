@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.9.1 on win32)" generated="20210209 10:49:12.739" rpa="false">
+<suite id="s1" name="TestSuit1" source="C:\Users\tiaj9\eclipse-t\Eka1\test\TestSuit1.robot">
+<kw name="Log" library="BuiltIn" type="setup">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Testi asetukset</arg>
+</arguments>
+<msg timestamp="20210209 10:49:13.086" level="INFO">Testi asetukset</msg>
+<status status="PASS" starttime="20210209 10:49:13.086" endtime="20210209 10:49:13.086"></status>
+</kw>
+<test id="s1-t1" name="EkaTesti">
+<kw name="Log" library="BuiltIn" type="setup">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Testiasetukset3</arg>
+</arguments>
+<msg timestamp="20210209 10:49:13.088" level="INFO">Testiasetukset3</msg>
+<status status="PASS" starttime="20210209 10:49:13.088" endtime="20210209 10:49:13.088"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Heippa...</arg>
+</arguments>
+<msg timestamp="20210209 10:49:13.089" level="INFO">Heippa...</msg>
+<status status="PASS" starttime="20210209 10:49:13.089" endtime="20210209 10:49:13.089"></status>
+</kw>
+<kw name="Log" library="BuiltIn" type="teardown">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Testiasetukset4</arg>
+</arguments>
+<msg timestamp="20210209 10:49:13.090" level="INFO">Testiasetukset4</msg>
+<status status="PASS" starttime="20210209 10:49:13.090" endtime="20210209 10:49:13.091"></status>
+</kw>
+<status status="PASS" starttime="20210209 10:49:13.086" endtime="20210209 10:49:13.091" critical="yes"></status>
+</test>
+<test id="s1-t2" name="ToinenTesti">
+<kw name="Log" library="BuiltIn" type="setup">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Testiasetukset3</arg>
+</arguments>
+<msg timestamp="20210209 10:49:13.095" level="INFO">Testiasetukset3</msg>
+<status status="PASS" starttime="20210209 10:49:13.095" endtime="20210209 10:49:13.095"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20210209 10:49:13.097" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com'.</msg>
+<status status="PASS" starttime="20210209 10:49:13.096" endtime="20210209 10:49:22.041"></status>
+</kw>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<status status="PASS" starttime="20210209 10:49:22.042" endtime="20210209 10:49:22.044"></status>
+</kw>
+<kw name="LoginKW">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=txtUsername</arg>
+<arg>@{CREDENTIALS}[0]</arg>
+</arguments>
+<msg timestamp="20210209 10:49:22.046" level="WARN">Accessing variable items using '@{CREDENTIALS}[0]' syntax is deprecated. Use '${CREDENTIALS}[0]' instead.</msg>
+<msg timestamp="20210209 10:49:22.047" level="INFO">Typing text 'Admin' into text field 'id=txtUsername'.</msg>
+<status status="PASS" starttime="20210209 10:49:22.045" endtime="20210209 10:49:22.172"></status>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=txtPassword</arg>
+<arg>&amp;{LOGINDATA}[password]</arg>
+</arguments>
+<msg timestamp="20210209 10:49:22.173" level="WARN">Accessing variable items using '&amp;{LOGINDATA}[password]' syntax is deprecated. Use '${LOGINDATA}[password]' instead.</msg>
+<msg timestamp="20210209 10:49:22.174" level="INFO">Typing password into text field 'id=txtPassword'.</msg>
+<msg timestamp="20210209 10:49:22.231" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20210209 10:49:22.295" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20210209 10:49:22.172" endtime="20210209 10:49:22.295"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>id=btnLogin</arg>
+</arguments>
+<msg timestamp="20210209 10:49:22.295" level="INFO">Clicking button 'id=btnLogin'.</msg>
+<status status="PASS" starttime="20210209 10:49:22.295" endtime="20210209 10:49:25.372"></status>
+</kw>
+<status status="PASS" starttime="20210209 10:49:22.045" endtime="20210209 10:49:25.372"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id=welcome</arg>
+</arguments>
+<msg timestamp="20210209 10:49:25.374" level="INFO">Clicking element 'id=welcome'.</msg>
+<status status="PASS" starttime="20210209 10:49:25.373" endtime="20210209 10:49:25.439"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>link=Logout</arg>
+</arguments>
+<msg timestamp="20210209 10:49:25.441" level="INFO">Clicking element 'link=Logout'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210209 10:49:31.168" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-26.png"&gt;&lt;img src="selenium-screenshot-26.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210209 10:49:30.534" endtime="20210209 10:49:31.168"></status>
+</kw>
+<msg timestamp="20210209 10:49:31.171" level="FAIL">Element with locator 'link=Logout' not found.</msg>
+<status status="FAIL" starttime="20210209 10:49:25.440" endtime="20210209 10:49:31.171"></status>
+</kw>
+<kw name="Log" library="BuiltIn" type="teardown">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Testiasetukset4</arg>
+</arguments>
+<msg timestamp="20210209 10:49:31.173" level="INFO">Testiasetukset4</msg>
+<status status="PASS" starttime="20210209 10:49:31.172" endtime="20210209 10:49:31.173"></status>
+</kw>
+<status status="FAIL" starttime="20210209 10:49:13.093" endtime="20210209 10:49:31.173" critical="yes">Element with locator 'link=Logout' not found.</status>
+</test>
+<test id="s1-t3" name="KolmasTesti">
+<kw name="Log" library="BuiltIn" type="setup">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Testiasetukset3</arg>
+</arguments>
+<msg timestamp="20210209 10:49:31.176" level="INFO">Testiasetukset3</msg>
+<status status="PASS" starttime="20210209 10:49:31.176" endtime="20210209 10:49:31.176"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>https://opensource-demo.orangehrmlive.com</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20210209 10:49:31.177" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com'.</msg>
+<status status="PASS" starttime="20210209 10:49:31.177" endtime="20210209 10:49:37.831"></status>
+</kw>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<status status="PASS" starttime="20210209 10:49:37.832" endtime="20210209 10:49:37.834"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=txtUsername</arg>
+<arg>Admin</arg>
+</arguments>
+<msg timestamp="20210209 10:49:37.835" level="INFO">Typing text 'Admin' into text field 'id=txtUsername'.</msg>
+<status status="PASS" starttime="20210209 10:49:37.835" endtime="20210209 10:49:37.953"></status>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=txtPassword</arg>
+<arg>admin123</arg>
+</arguments>
+<msg timestamp="20210209 10:49:37.954" level="INFO">Typing password into text field 'id=txtPassword'.</msg>
+<msg timestamp="20210209 10:49:38.009" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20210209 10:49:38.070" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20210209 10:49:37.954" endtime="20210209 10:49:38.070"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>id=btnLogin</arg>
+</arguments>
+<msg timestamp="20210209 10:49:38.071" level="INFO">Clicking button 'id=btnLogin'.</msg>
+<status status="PASS" starttime="20210209 10:49:38.070" endtime="20210209 10:49:45.769"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id=welcome</arg>
+</arguments>
+<msg timestamp="20210209 10:49:45.770" level="INFO">Clicking element 'id=welcome'.</msg>
+<status status="PASS" starttime="20210209 10:49:45.770" endtime="20210209 10:49:45.832"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>link=Logout</arg>
+</arguments>
+<msg timestamp="20210209 10:49:45.833" level="INFO">Clicking element 'link=Logout'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210209 10:49:51.552" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-27.png"&gt;&lt;img src="selenium-screenshot-27.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210209 10:49:50.932" endtime="20210209 10:49:51.553"></status>
+</kw>
+<msg timestamp="20210209 10:49:51.555" level="FAIL">Element with locator 'link=Logout' not found.</msg>
+<status status="FAIL" starttime="20210209 10:49:45.832" endtime="20210209 10:49:51.555"></status>
+</kw>
+<kw name="Log" library="BuiltIn" type="teardown">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Testiasetukset4</arg>
+</arguments>
+<msg timestamp="20210209 10:49:51.556" level="INFO">Testiasetukset4</msg>
+<status status="PASS" starttime="20210209 10:49:51.556" endtime="20210209 10:49:51.557"></status>
+</kw>
+<status status="FAIL" starttime="20210209 10:49:31.175" endtime="20210209 10:49:51.558" critical="yes">Element with locator 'link=Logout' not found.</status>
+</test>
+<kw name="Log" library="BuiltIn" type="teardown">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Testiasetukset2</arg>
+</arguments>
+<msg timestamp="20210209 10:49:51.560" level="INFO">Testiasetukset2</msg>
+<status status="PASS" starttime="20210209 10:49:51.559" endtime="20210209 10:49:51.560"></status>
+</kw>
+<status status="FAIL" starttime="20210209 10:49:12.741" endtime="20210209 10:49:51.560"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="2">Critical Tests</stat>
+<stat pass="1" fail="2">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="2" id="s1" name="TestSuit1">TestSuit1</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20210209 10:49:22.046" level="WARN">Accessing variable items using '@{CREDENTIALS}[0]' syntax is deprecated. Use '${CREDENTIALS}[0]' instead.</msg>
+<msg timestamp="20210209 10:49:22.173" level="WARN">Accessing variable items using '&amp;{LOGINDATA}[password]' syntax is deprecated. Use '${LOGINDATA}[password]' instead.</msg>
+</errors>
+</robot>

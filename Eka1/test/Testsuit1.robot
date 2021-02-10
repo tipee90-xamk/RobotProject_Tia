@@ -37,6 +37,6 @@ ${URL}     https://opensource-demo.orangehrmlive.com
 
 *** Keywords ***
 LoginKW
-    Input Text      id=txtUsername    @{CREDENTIALS}[0]
-    Input Password  id=txtPassword    &{LOGINDATA}[password]
+    Input Text      id=txtUsername    ${CREDENTIALS}[0]
+    Input Password  id=txtPassword    ${LOGINDATA}[password]
     Click Button    id=btnLogin
